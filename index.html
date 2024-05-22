@@ -155,12 +155,16 @@
             <div
               class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
             >
-              <h1 class="pb-2">Welcome BrainBoost</h1>
-              <p>
-                BrainBoost is a place where is safe for you. We are on a mission to
-                provide support and spread awareness about mental health to the
-                world.
-              </p>
+              <h1 class="pb-2">Welcome to BrainBoost</h1>
+              <p id="short" class="p1">
+                Take control of your mental health with BrainBoost! Discover tools, resources, and support for a happier, more fulfilling life
+                <span id="dots">...</span>
+                <span id="more" >
+                    Explore articles on stress management, mindfulness, cognitive function, and emotional resilience. Boost your mood, enhance focus, and navigate everyday life with ease. Join our community today and start your journey towards a brighter, more balanced you. Visit BrainBoost to elevate your mental well-being!
+                </span>
+            </p>
+            <a href="javascript:void(0);" onclick="toggleText()" id="myBtn">See More</a>
+        
               <div>
                 <a href="./html/login.html" class="btn-get-started scrollto""
                   >Get Started</a
@@ -886,6 +890,21 @@
           mirror: false,
         });
       });
+      function toggleText() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "See More";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "See Less";
+            moreText.style.display = "inline";
+        }
+    }
     </script>
   </body>
 </html>

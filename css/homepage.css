@@ -48,7 +48,15 @@ body {
     margin: 80px 20px 80px 20px;
   }
 }
-
+#more {
+  display: none;
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden; /* Hide content overflow */
+  transition: max-height 0.5s ease-in-out;
+}
+.p1 {
+  text-indent: 20px; /* Adds space in front of the text */
+}
 /*--------------------------------------------------------------
 # Message Section
 --------------------------------------------------------------*/
@@ -190,11 +198,11 @@ body {
   display: block;
   text-align: center;
 }
-.section-title h4{
-    color: #616161;
+.section-title h4 {
+  color: #616161;
 }
 .section-title h1 {
-   padding: 20px 0 60px 0;
+  padding: 20px 0 60px 0;
 }
 .faq {
   padding: 70px 0 70px 0;
